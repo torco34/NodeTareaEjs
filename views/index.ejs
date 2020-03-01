@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Node Tarea Esj</title>
-</head>
-<body>
-	<h1>Node</h1>
+	<title><%= title%></title>
 	
+ <%- include('./partials/head.ejs') %>
+</head>
+<body class="container">
+	<h1>
+		<a href="/">Node Tareas Ejs</a>
+		<a href="/new-entry" class="btn btn-primary pull-right">Nueva Entrda</a>
+	</h1>
+	<!--<%= title%>-->
+
 </body>
 </html>

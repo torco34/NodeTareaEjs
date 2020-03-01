@@ -22,6 +22,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
  
  //la rutas
+
+app.use('/', require('./routes/index'));
+
+
 app.get('/', (req, res) =>{
 	res.render('index');
 })
