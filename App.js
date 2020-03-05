@@ -23,12 +23,14 @@ app.use(bodyParser.urlencoded({extended:false}));
  
  //la rutas
 
-app.use('/', require('./routes/index'));
+ require('./routes/index')(app);
 
 
 app.get('/', (req, res) =>{
 	res.render('index');
-})
+});
+
+
 app.listen(3000, () => {
 	console.log(`cadena de texto ${3000}`)
 }) 

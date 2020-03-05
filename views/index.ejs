@@ -4,14 +4,41 @@
 	<meta charset="UTF-8">
 	<title><%= title%></title>
 	
- <%- include('./partials/head.ejs') %>
+	<%- include('./partials/head.ejs') %>
 </head>
 <body class="container">
-	<h1>
-		<a href="/">Node Tareas Ejs</a>
-		<a href="/new-entry" class="btn btn-primary pull-right">Nueva Entrda</a>
-	</h1>
-	<!--<%= title%>-->
+
+	<%- include('./partials/header.ejs') %>
+	<% if(entries.length) { %>
+	<% entries.forEach(function(entry) { %>
+	<div class="panel panel-primary  t-5 bg-dark text-white" align="right" >
+		<div class="panel-body p-2  bg-dark t-5" align="left" >
+			<%= entry.title %>
+		</div>
+		<div class="" align="right">
+			<%= entry.published %>
+			<div class="bg-info text-white p-4" align="left">
+				<%= entry.content %>
+			</div>
+		</div>
+	</div>
+
+
+	<% }) %>
+	<% } else {%>
+	<h2>ya existe</h2>
+	<% } %>
+	
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
